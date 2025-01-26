@@ -14,7 +14,7 @@ local projects        = require 'projects'
 -- FUNCTIONS AND EVENT BINDINGS
 -- --------------------------------------------------------------------
 
--- On startup 
+-- On startup
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
@@ -142,7 +142,7 @@ end
 
 config.adjust_window_size_when_changing_font_size = false
 config.automatically_reload_config = true
-config.color_scheme = 'Solarized (dark) (terminal.sexy)'
+config.color_scheme = 'rose-pine'
 config.enable_scroll_bar = true
 config.enable_wayland = true
 -- config.font = wezterm.font('Hack')
@@ -152,7 +152,7 @@ config.font_size = 16.0
 config.hide_tab_bar_if_only_one_tab = false
 -- The leader is similar to how tmux defines a set of keys to hit in order to
 -- invoke tmux bindings. Binding to ctrl-a here to mimic tmux
-config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 2000 }
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 5000 }
 config.mouse_bindings = {
     -- Open URLs with Ctrl+Click
     {
@@ -202,10 +202,10 @@ config.keys = {
     --     mods = 'ALT',
     --     action = act.DisableDefaultAssignment,
     -- },
-   
+
     -- List of commands
     -- { key = "/", mods = "ALT", action = wezterm.action.ShowLauncher },
-   
+
     -- Copy mode
     {
         key = '[',
@@ -421,7 +421,7 @@ config.keys = {
             ),
         },
     },
-    
+
     -- Projects
     {
         key = 'p',
@@ -446,6 +446,27 @@ config.keys = {
         mods = 'LEADER|SHIFT',
         action = act({ EmitEvent = "restore_session" }),
     },
+
+	-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+	{
+		key="LeftArrow",
+		mods="OPT",
+		action=act({SendString="\x1bb"})
+	},
+
+	-- Make Option-Right equivalent to Alt-f; forward-word
+	{
+		key="RightArrow",
+		mods="OPT",
+		action=act({SendString="\x1bf"})
+	},
+
+	-- Launch commands in a new pane
+	{
+		key = 'g',
+		mods = 'CMD',
+		action = act.SplitHorizontal{args = { os.getenv("SHELL"), "-c", "lazygit" } }
+	}
 }
 
 for i = 1, 9 do
@@ -472,18 +493,18 @@ local function segments_for_right_status(window)
       wezterm.hostname(),
     }
   end
-  
+
   wezterm.on('update-status', function(window, _)
     local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
     local segments = segments_for_right_status(window)
-  
+
     local color_scheme = window:effective_config().resolved_palette
     -- Note the use of wezterm.color.parse here, this returns
     -- a Color object, which comes with functionality for lightening
     -- or darkening the colour (amongst other things).
     local bg = wezterm.color.parse(color_scheme.background)
     local fg = color_scheme.foreground
-  
+
     -- Each powerline segment is going to be coloured progressively
     -- darker/lighter depending on whether we're on a dark/light colour
     -- scheme. Let's establish the "from" and "to" bounds of our gradient.
@@ -493,7 +514,7 @@ local function segments_for_right_status(window)
     else
       gradient_from = gradient_to:darken(0.2)
     end
-  
+
     -- Yes, WezTerm supports creating gradients, because why not?! Although
     -- they'd usually be used for setting high fidelity gradients on your terminal's
     -- background, we'll use them here to give us a sample of the powerline segment
@@ -505,24 +526,24 @@ local function segments_for_right_status(window)
       },
       #segments -- only gives us as many colours as we have segments.
     )
-  
+
     -- We'll build up the elements to send to wezterm.format in this table.
     local elements = {}
-  
+
     for i, seg in ipairs(segments) do
       local is_first = i == 1
-  
+
       if is_first then
         table.insert(elements, { Background = { Color = 'none' } })
       end
       table.insert(elements, { Foreground = { Color = gradient[i] } })
       table.insert(elements, { Text = SOLID_LEFT_ARROW })
-  
+
       table.insert(elements, { Foreground = { Color = fg } })
       table.insert(elements, { Background = { Color = gradient[i] } })
       table.insert(elements, { Text = ' ' .. seg .. ' ' })
     end
-  
+
     window:set_right_status(wezterm.format(elements))
   end)
 
