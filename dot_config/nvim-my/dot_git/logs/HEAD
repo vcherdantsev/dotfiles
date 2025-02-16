@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 c5ff4f74b881c174297426178b0d4928d4e40117 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739693280 +0700	clone: from https://github.com/VonHeikemen/nvim-starter.git
+c5ff4f74b881c174297426178b0d4928d4e40117 c5ff4f74b881c174297426178b0d4928d4e40117 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739693329 +0700	checkout: moving from main to 05-modular
+c5ff4f74b881c174297426178b0d4928d4e40117 c5ff4f74b881c174297426178b0d4928d4e40117 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739693425 +0700	checkout: moving from 05-modular to master
+c5ff4f74b881c174297426178b0d4928d4e40117 c5ff4f74b881c174297426178b0d4928d4e40117 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739693558 +0700	checkout: moving from master to main
+c5ff4f74b881c174297426178b0d4928d4e40117 c5ff4f74b881c174297426178b0d4928d4e40117 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739693577 +0700	checkout: moving from main to origin/05-modular
+c5ff4f74b881c174297426178b0d4928d4e40117 c5ff4f74b881c174297426178b0d4928d4e40117 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739693588 +0700	checkout: moving from origin/05-modular to main
+c5ff4f74b881c174297426178b0d4928d4e40117 1d7e3d5f0f3d734cbebc90991fcedd1964f2c7f8 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739693653 +0700	checkout: moving from main to 05-modular
+1d7e3d5f0f3d734cbebc90991fcedd1964f2c7f8 1d7e3d5f0f3d734cbebc90991fcedd1964f2c7f8 Vladimir Cherdantsev <v.cherdantsev@live.com> 1739694057 +0700	checkout: moving from 05-modular to 06-whichkey
+1d7e3d5f0f3d734cbebc90991fcedd1964f2c7f8 2960a9be5911b4a1573446f315d5588e68c85aac Vladimir Cherdantsev <v.cherdantsev@live.com> 1739694667 +0700	commit: which-key added

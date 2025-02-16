@@ -1,0 +1,13 @@
+270f1814cb9998b6f568cc27a3b814a954429839	not-for-merge	branch '00-minimal' of https://github.com/VonHeikemen/nvim-starter
+26081232648392f563c616ce84e1d2279a48d908	not-for-merge	branch '01-base' of https://github.com/VonHeikemen/nvim-starter
+37ebd97b5249108e5455e84529381157d55d162b	not-for-merge	branch '02-opinionated' of https://github.com/VonHeikemen/nvim-starter
+de0e951f9b0b8f6ae41e7f30cda2724a15265070	not-for-merge	branch '03-lsp' of https://github.com/VonHeikemen/nvim-starter
+aac680653e8a434cd926189e12839d1908743a49	not-for-merge	branch '04-lsp-installer' of https://github.com/VonHeikemen/nvim-starter
+1d7e3d5f0f3d734cbebc90991fcedd1964f2c7f8	not-for-merge	branch '05-modular' of https://github.com/VonHeikemen/nvim-starter
+c5ff4f74b881c174297426178b0d4928d4e40117	not-for-merge	branch 'main' of https://github.com/VonHeikemen/nvim-starter
+f517902c1d67cfdc1845838cf37d42c5d6ce3a1e	not-for-merge	branch 'xx-basic-lsp' of https://github.com/VonHeikemen/nvim-starter
+2a28db02cca513b777d95d2630b314c889696389	not-for-merge	branch 'xx-light' of https://github.com/VonHeikemen/nvim-starter
+740fc4d37d546b8c2f5eb28c994e6fdb405acc2f	not-for-merge	branch 'xx-lsp-cmp' of https://github.com/VonHeikemen/nvim-starter
+b297df75bdcc344253cceb40824e0d7c5a06a0ca	not-for-merge	branch 'xx-lsp-zero-v1' of https://github.com/VonHeikemen/nvim-starter
+13ec1d32d8abd09ff3607d4933d08d7a368426c0	not-for-merge	branch 'xx-mason' of https://github.com/VonHeikemen/nvim-starter
+0edad8f30a80b69f79f9a619f7f5561043a11305	not-for-merge	branch 'xx-user-plugins' of https://github.com/VonHeikemen/nvim-starter
