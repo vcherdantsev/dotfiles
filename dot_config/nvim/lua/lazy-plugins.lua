@@ -60,6 +60,7 @@ require('lazy').setup({
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.trouble',
   require 'kickstart.plugins.lualine',
+  require 'kickstart.plugins.firenvim',
   -- require 'kickstart/plugins/minifiles',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
