@@ -80,3 +80,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4      -- Количество пробелов, используемых для табуляции
 vim.opt.shiftwidth = 4   -- Количество пробелов для автоматического отступа
 vim.opt.softtabstop = 4  -- Количество пробелов, используемых при нажатии Tab
+
+-- Отключаем netrw
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
