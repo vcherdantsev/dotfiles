@@ -45,4 +45,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- we want to map <CMD-s> in neovim to save the buffer.
+vim.keymap.set('n', '<Char-0xAA>', '<cmd>write<cr>', {
+  desc = 'N: Save current file by <command-s>',
+})
+
 -- vim: ts=2 sts=2 sw=2 et
